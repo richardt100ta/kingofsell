@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45013586-2"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'UA-45013586-2');
+	</script>
+
+	<title>宙生集團廣告王</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="》宙生集團,廣告王,landing page,Macrocosmo,Advertisement">
+	<meta name="description" content="》宙生集團廣告王 , 最美好的事物 , 要讓更多人知道 !">
+	<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8" />
+	<!--
+	<link rel="image_src" href="https://www.cadian.com.tw/product/images/cadian2020.jpg" />
+	<link href="../favicon_cadian.ico" rel="icon" type="image/x-icon" />
+	!-->
+	<!-- IE 只能相容 jQuery 1.12.x 版, 2.X 和 3.X都不行 !-->
+	<link rel="stylesheet" type="text/css" href="macrocosmo.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+    <!--
+    <link type="text/css" rel="stylesheet" href="jquery-te-1.4.0.css">
+    !-->
+	<style type="text/css">
+	    /*為了擋掉免費虛擬主機的右下角廣告*/
+		body > div:last-of-type{
+    		display:none !important;
+    		position:fixed !important;
+    		bottom:-9999px !important;
+    		right:-9999px !important;
+    		width:0px !important;
+    		height: 0px !important;
+		}
+	</style>
+	<!-- jQuery TE的link若要正常,必須搭配 jQuery 1.12.4版本 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="macrocosmo.js"></script>	
+	<!--
+    <script data-ad-client="ca-pub-9249193844446069" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="text/javascript" src="jquery-te-1.4.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="https://cdn.tiny.cloud/1/fuwr7l68mcobe2qbn7pktxata7xq6zq18o2heu4frvrnosc9/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	!-->
+	<script src="https://www.cadian.com.tw/facebook.js"></script>
+	<script type="text/javascript">
+		function isMobile() {
+			try{ document.createEvent("TouchEvent"); return true; }
+			catch(e){ return false;}
+		}
+		function about() {
+			clrsubmenu();
+			$('#showarea').html('<h3>About Macrocosmo Group.</h3>');
+		}
+		function clrsubmenu() {
+			$('#submenu').hide();
+		}
+		function product() {
+			var str = '<table id="pmenu" cellspacing="0" cellpadding="0">'
+				+'<tr><td>CAD software</td><td>Supply chain for Design</td><td>Project management</td><td>Sales management</td><td>Biotech</td><td>Green power</td></tr>'
+				+'</table>';
+			$('#submenu').html(str);
+			$('#submenu').fadeIn();
+		}
+		function cotact() {
+			clrsubmenu();
+			$('#showarea').html('<h3>Contact us.</h3>');
+		}
+		/*
+		function logbtn() {
+			$('#logform').dialog({
+				resizable: false,
+      			height: "auto",
+      			width: "auto",
+      			modal: true,
+			});
+		}*/
+		
+		function gettextarea(){
+			var con = $('.jte').val();
+			alert(con);
+			/*TinyMCE取得內容的方法
+			var con = tinyMCE.get("subtext").getContent();
+			alert(con);*/
+		}
+		function initmobile(){
+			if(isMobile()){
+				var sw = screen.availWidth;
+				var hts = sw/25;
+				var cts = sw/30;
+				$('#menubar a').css({'font-size':hts+'px'});
+				$('#headtext').css({'font-size':hts+'px'});
+				$('#mainmenu a').css({'font-size':hts+'px'});
+				$('#logbtn').css({'font-size':hts+'px'});
+				$('h1').css({'font-size':hts+'px'});
+				$('.contenttext span').css({'font-size':cts+'px'});
+				//偵測手機轉向事件,方向有0,90,-90度
+				window.addEventListener("orientationchange", function() {
+					//alert(window.orientation);
+					var sw = screen.availWidth;
+					if(window.orientation == 0){
+						var hts = sw/25;
+						var cts = sw/30;
+						$('#menubar a').css({'font-size':hts+'px'});
+						$('#headtext').css({'font-size':hts+'px'});
+						$('#mainmenu a').css({'font-size':hts+'px'});
+						$('#logbtn').css({'font-size':hts+'px'});
+						$('h1').css({'font-size':hts+'px'});
+						$('.contenttext span').css({'font-size':cts+'px'});
+					}else{
+						var hts = sw/30;
+						var cts = sw/35;
+						$('#menubar a').css({'font-size':hts+'px'});
+						$('#headtext').css({'font-size':hts+'px'});
+						$('#mainmenu a').css({'font-size':hts+'px'});
+						$('#logbtn').css({'font-size':hts+'px'});
+						$('h1').css({'font-size':hts+'px'});
+						$('.contenttext span').css({'font-size':cts+'px'});
+					}
+				}, false);
+			}
+		}
+		function handleOrientation(event) {
+			alert(screen.availWidth);
+		}
+	</script>
+</head>
+<body style="margin: 0 auto;padding: 0">
+	<!--
+	<script type="text/javascript">
+		document.write('navigator.language:'+navigator.language.toLowerCase());
+		document.write('<br>navigator.userLanguage:'+navigator.userLanguage);
+		document.write('<br>navigator.browserLanguage:'+navigator.browserLanguage);
+		document.write('<br>navigator.systemLanguage:'+navigator.systemLanguage);
+		document.write('<br>navigator.userAgent:'+navigator.userAgent.search("Safari"));
+	</script>
+	
+	<div id="Layer4"><img src="CadianTaiwan.gif" alt="cadian" width="200" height="50" border="0" align="middle" usemap="#Map" />
+  		<map name="Map" id="Map">
+    		<area shape="rect" coords="3,1,201,49" href="http://www.cadian.com.tw" />
+  		</map>
+	</div>
+    !-->
+    <table id="headbar" cellspacing="0" cellpadding="0">
+		<tr>
+			<td id="logoimg" width="15%" style="text-align: center;"><img src="https://www.cadian.com.tw/cadianlogo2020.jpg" style="width:100%;vertical-align: top;"/></td>
+			<td width="75%" style="vertical-align: middle;"><strong><span id="headtext" style="color : royalblue;margin-left: 5%; text-shadow: gainsboro 5px 5px 5px;font-size: 2.4rem;">最美好的事物 , 要讓更多人知道 !</span></strong></td>
+			<td width="10%" style="vertical-align: middle;text-align: center;"><button id="logbtn" onclick="logbtn();">登 入</button></td>
+		</tr>
+    </table>
+    <!-- ul之外不可以再用div包起來,否則position:sticky會失效 -->
+	<ul id="mainmenu">
+		<li><a href="index.html">訊息</a></li>
+		<li><a href="score.html">分類廣告</a></li>
+		<li><a href="member.html">會員</a></li>
+		<li style="float: right;"><a id="fb" href="https://www.facebook.com/Macrocosmo-Group-INC-576673976152740/" target="_blank" style="font-weight:bold;background-color: darkcyan;">facebook</a></li>
+	</ul>
+	
+	
+	<div class="macrocontent">
+		<img src="https://digitalagent.s3.ap-southeast-1.amazonaws.com/admin-inboundmarketing-com-tw/images/5c4839355c4c7-sbeirdtdbiQHXWpMuZI0piqqhX0P2D.jpeg" />
+		<div class="contenttext">
+			<h1>用宙生集團考試王加強您的學習效果</h1>
+			<span>
+				拼命讀書沒有測試自己,怎麼知道能不能通過考試 ?<br/>
+				考試的訣竅與讀書不同 , 考試要掌握時間才能得高分 !<br/>
+				讓考試王幫助您迅速掌握考試的訣竅 , 每次都得高分 !<br/>
+			</span>
+		</div>
+	</div>
+	<div class="macrocontent">
+		<img src="https://lh3.googleusercontent.com/proxy/yBLpxsSHE7tFdSKbhCKXCCKHQCUb4G9zPjNgsAC-VoXTM7VeFiK64E_h6gmzU1jM6ki-LseEIKK3azly1ZcgTz7fclZ2Z0kdp3zfO2Eh0rmlp5ffJluI7VMK2Bd7tKvdkhbcu64JWbltZjWdZagRGyQAqOTBJD8S4kTVBAoKcBe9zR1_5suzdT-4" />
+		<div class="contenttext">
+			<h1>將知識轉成經濟 , 才具有力量 !!!</h1>
+			<span>
+				知識不能是廉價的 , 知識必須產生價值 !!!<br/>
+				知識必須能夠質化量化 , 才能產生力量 !<br/>
+				知識必須能夠產生經濟 , 才能夠延續散佈 !<br/>
+			</span>
+		</div>
+		
+		<!-- jQuery TE要用div來限制width及height -->
+		<!--
+		<div style="width: 50%;margin: 0 auto;">
+			<textarea id="subtext" class="jte"></textarea>
+			<button onclick="gettextarea();">送 出</button>
+		</div>
+		<button onclick="createCookie('muser','iafever',1);">建立</button>
+		-->
+		<script>
+			/* jte 程式碼
+			$('.jte').jqte({
+			});
+			$('.jte').jqteVal('<h2>宙生集團</h2>');
+			*/
+			/* tinymce 程式碼
+			tinymce.init({
+			  selector: 'textarea',
+			  language:'zh_TW',
+			  width: '500',
+			  plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+			  toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+			  toolbar_mode: 'floating',
+			  tinycomments_mode: 'embedded',
+			  tinycomments_author: 'Author name',
+			  branding: false,
+			});
+			*/
+		</script>
+	</div>
+	<div id="logform" style="display: none;font-size: 1.0em;font-weight: bold;color: dimgray;text-align: center;" title="會員登入">
+		帳 號 : <input id="userid" type="text" size="20" maxlength="60" placeholder="email" style="font-size: 1.0em;padding: 0.4em;margin-top: 20px;"/><br/>
+		密 碼 : <input id="userpass" type="password" size="20" maxlength="15" style="font-size: 1.0em;padding: 0.4em;margin-top: 20px;"/><br/>
+		<button id="logon" onclick="logon();" style="font-size: 1.2em;font-weight: bold;">登 入</button><br/>
+		<button id="logreg" onclick="logreg();" style="font-size: 1.2em;font-weight: bold;">註 冊</button><br/>
+		<button id="logpass" onclick="logpass();" style="font-size: 1.2em;font-weight: bold;">忘記密碼</button><br/><br/>
+	</div>
+	<br/><br/>
+	<script>
+		$().ready(function(){
+			initmobile();
+			/*
+			if (isMobile()){
+				//加入偵測手機方向的event
+				window.addEventListener("deviceorientation", handleOrientation, true);
+				$('#menubar a').css({'font-size':'0.9rem'});
+				$('#headtext').css({'font-size':'0.9rem'});
+				//var fs = window.screen.width/30;
+				//alert(fs);
+				//$('#headbar').css({'font-size':'0.6rem'});
+				//$('body').css({'width':'100%','font-size':fs+'px'});
+				//alert($('body').css('font-size'));
+				//$('p').css({'font-size':'35px'});
+			}else{
+				//alert(window.screen.width);
+				$('#headtext').css({'font-size':'2.4rem'});
+			}*/
+			$('#mainmenu li a').eq(0).css({'background-color':'darkcyan'});
+		});
+	</script>
+	<div style="display: none;"></div><!--為了擋掉免費虛擬主機的右下角廣告-->
+</body>
+</html>
